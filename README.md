@@ -14,17 +14,8 @@ When the hand approaches or touches the virtual area, a visual warning is activa
 | WARNING | Hand approaching target | Yellow status |
 | DANGER | Hand very close / touching | Red flashing alert + "DANGER DANGER" |
 
-## Assignment Requirements 
-
-| Requirement | Status |
-|------------|--------|
-| Real-time hand tracking | ✔ Achieved (YOLOv5n custom trained) |
-| NO MediaPipe / NO OpenPose / NO cloud APIs | ✔ Fully compliant |
-| Classical CV OR small ML model | ✔ YOLOv5n + Convex Hull Fingertip detection |
-| SAFE / WARNING / DANGER logic | ✔ Implemented |
-| Visual overlay and alerts | ✔ Included |
-| CPU-only ≥ 8 FPS | ✔ ~15–30 FPS in real-time |
-| Python + OpenCV + NumPy + PyTorch allowed | ✔ Used |
+This model is capable of tracking both fingers or any part of the hand and checks at >20 FPS in real-time and uses Python + OpenCV + NumPy + PyTorch.
+The Yolov5n small model is custom trained with just 511 images, making it small and effective.
 
 ## Technology Stack
 
@@ -37,18 +28,12 @@ When the hand approaches or touches the virtual area, a visual warning is activa
 | Visualization | Live overlays + Danger Alerts |
 
 
-## Folder Structure
-
-Proximity_Detection/
-│
-├── best.pt # Trained YOLO model (custom)
-├── main.py # Main execution script
-├── README.md # Documentation
-└── requirements.txt # Dependencies
-
 ## Instalation Procedure
 1. Clone the Repo
 2. python -m venv venv
 3. venv\Scripts\activate     # Creating virtual environment
 4. pip install -r requirements.txt
 5. python main.py # to run the model and get the video capture mode onn 
+
+Sample video: 
+<video controls src="Sample_video.mp4" title="Title"></video>

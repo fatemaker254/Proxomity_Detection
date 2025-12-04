@@ -4,7 +4,7 @@ import torch
 import time
 import random
 
-# ------------------- CONFIG -------------------
+
 FRAME_WIDTH = 640
 FRAME_HEIGHT = 480
 
@@ -24,7 +24,7 @@ VIRTUAL_TARGET_POS = (
 )
 TARGET_RADIUS = 30
 
-# ------------------- LOAD YOLO MODEL -------------------
+#Loading model
 model = torch.hub.load("ultralytics/yolov5", "custom", path="best.pt")
 model.conf = 0.45  # confidence threshold
 
